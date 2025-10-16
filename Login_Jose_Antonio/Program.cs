@@ -11,7 +11,7 @@ namespace Login_Jose_Antonio
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Registro());
+            Application.Run(new LOGIN1());
         }
     }
 }

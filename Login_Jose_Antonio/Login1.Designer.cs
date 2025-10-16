@@ -55,7 +55,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // LOGIN
             // 
@@ -66,7 +65,6 @@
             LOGIN.Name = "LOGIN";
             LOGIN.Size = new Size(0, 15);
             LOGIN.TabIndex = 1;
-            LOGIN.Click += label1_Click;
             // 
             // SESION
             // 
@@ -78,7 +76,7 @@
             SESION.TabIndex = 2;
             SESION.Text = "Sign In";
             SESION.UseVisualStyleBackColor = true;
-            SESION.Click += button1_Click;
+            SESION.Click += SESION_Click;
             // 
             // textBox1
             // 
@@ -87,7 +85,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(113, 23);
             textBox1.TabIndex = 3;
-            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // Password
             // 
@@ -108,7 +105,7 @@
             REGISTRO.TabIndex = 5;
             REGISTRO.Text = "Sign Up";
             REGISTRO.UseVisualStyleBackColor = false;
-            REGISTRO.Click += button2_Click;
+            REGISTRO.Click += btnRegister_Click;
             // 
             // PEAR
             // 
@@ -121,7 +118,6 @@
             PEAR.Size = new Size(97, 45);
             PEAR.TabIndex = 6;
             PEAR.Text = "PEAR";
-            PEAR.Click += label1_Click_1;
             // 
             // MAIL
             // 
@@ -136,7 +132,6 @@
             MAIL.Size = new Size(64, 16);
             MAIL.TabIndex = 7;
             MAIL.Text = "Your Mail:";
-            MAIL.Click += label2_Click;
             // 
             // CONTRASEÑA
             // 
@@ -179,19 +174,17 @@
             PANEL.Name = "PANEL";
             PANEL.Size = new Size(257, 440);
             PANEL.TabIndex = 11;
-            PANEL.Paint += PANEL_Paint;
             // 
             // LOGIN1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(277, 458);
+            ClientSize = new Size(300, 500);
             Controls.Add(PANEL);
             Controls.Add(LOGIN);
             Name = "LOGIN1";
             Text = "Form1";
-            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             PANEL.ResumeLayout(false);
             PANEL.PerformLayout();

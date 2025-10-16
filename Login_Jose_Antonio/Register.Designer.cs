@@ -42,6 +42,8 @@
             label2 = new Label();
             textBox3 = new TextBox();
             panel1 = new Panel();
+            label4 = new Label();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -83,18 +85,10 @@
             // 
             // MAIL
             // 
-            MAIL.AutoEllipsis = true;
-            MAIL.AutoSize = true;
-            MAIL.BackColor = SystemColors.ActiveCaptionText;
-            MAIL.Font = new Font("Yu Gothic", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            MAIL.ForeColor = SystemColors.Control;
-            MAIL.Location = new Point(73, 121);
-            MAIL.MaximumSize = new Size(180, 0);
+            MAIL.Location = new Point(0, 0);
             MAIL.Name = "MAIL";
-            MAIL.Size = new Size(64, 16);
-            MAIL.TabIndex = 12;
-            MAIL.Text = "Your Mail:";
-            MAIL.Click += MAIL_Click;
+            MAIL.Size = new Size(100, 23);
+            MAIL.TabIndex = 22;
             // 
             // textBox1
             // 
@@ -126,7 +120,6 @@
             Password.ScrollBars = ScrollBars.Horizontal;
             Password.Size = new Size(113, 23);
             Password.TabIndex = 15;
-            Password.TextChanged += Password_TextChanged;
             // 
             // SESION
             // 
@@ -138,6 +131,7 @@
             SESION.TabIndex = 16;
             SESION.Text = "Sign In";
             SESION.UseVisualStyleBackColor = true;
+            SESION.Click += SESION_Click;
             // 
             // label1
             // 
@@ -188,6 +182,8 @@
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(textBox3);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(textBox2);
@@ -202,19 +198,45 @@
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(12, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(253, 407);
+            panel1.Size = new Size(260, 483);
             panel1.TabIndex = 21;
+            // 
+            // label4
+            // 
+            label4.AutoEllipsis = true;
+            label4.AutoSize = true;
+            label4.BackColor = SystemColors.ActiveCaptionText;
+            label4.Font = new Font("Yu Gothic", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label4.ForeColor = SystemColors.Control;
+            label4.Location = new Point(73, 121);
+            label4.MaximumSize = new Size(180, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(64, 16);
+            label4.TabIndex = 24;
+            label4.Text = "Your Mail:";
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Silver;
+            button1.Cursor = Cursors.Hand;
+            button1.ImageAlign = ContentAlignment.TopCenter;
+            button1.Location = new Point(13, 427);
+            button1.Name = "button1";
+            button1.Size = new Size(87, 27);
+            button1.TabIndex = 23;
+            button1.Text = "Back";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += Button1_Click;
             // 
             // Registro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(268, 421);
+            ClientSize = new Size(300, 500);
             Controls.Add(panel1);
             Name = "Registro";
             Text = "Form2";
-            Load += Registro_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -236,5 +258,7 @@
         private Label label2;
         private TextBox textBox3;
         private Panel panel1;
+        private Button button1;
+        private Label label4;
     }
 }

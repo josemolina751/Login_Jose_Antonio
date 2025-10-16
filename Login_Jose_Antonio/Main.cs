@@ -10,24 +10,14 @@ using System.Windows.Forms;
 
 namespace Login_Jose_Antonio
 {
-    public partial class Registro : Form
+    public partial class Main : Form
     {
-        public Registro()
+        public Main()
         {
             InitializeComponent();
         }
 
-        private void Registro_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MAIL_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Password_TextChanged(object sender, EventArgs e)
+        private void nuevo_Click(object sender, EventArgs e)
         {
 
         }
