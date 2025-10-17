@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace Login_Jose_Antonio
@@ -9,31 +8,45 @@ namespace Login_Jose_Antonio
         public LOGIN1()
         {
             InitializeComponent();
+
+            textBox1.KeyDown += TextBox1_KeyDown;
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
+        private void TextBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            // Abre Registro y oculta este formulario
-            Registro registroForm = new Registro(this); // pasamos la instancia actual
-            registroForm.Show();
-            this.Hide();
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; 
+                SignIn(); 
+            }
         }
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
-            // Aquí va tu lógica de login...
-            // Si todo OK, abrir Main
-            Main mainForm = new Main();
-            mainForm.Show();
-            this.Hide();
-        }
-        private void SESION_Click(object sender, EventArgs e)
-        {
-            // Aquí verificas usuario y contraseña si quieres, por ahora abrimos MainForm
-            Main mainForm = new Main();
-            mainForm.Show();
-            this.Hide(); // Oculta el login
+            SignIn();
         }
 
+        private void SignIn()
+        {
+            string usuario = textBox1.Text.Trim();
+            if (!string.IsNullOrEmpty(usuario))
+            {
+                Main mainForm = new Main(this, usuario);
+                mainForm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Introduce un nombre de usuario.", "Aviso",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            Registro registroForm = new Registro(this);
+            registroForm.Show();
+            this.Hide();
+        }
     }
 }

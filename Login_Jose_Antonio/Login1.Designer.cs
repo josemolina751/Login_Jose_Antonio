@@ -1,4 +1,5 @@
-﻿namespace Login_Jose_Antonio
+﻿
+namespace Login_Jose_Antonio
 {
     partial class LOGIN1
     {
@@ -19,6 +20,10 @@
             }
             base.Dispose(disposing);
         }
+        private void PANEL_Paint(object sender, PaintEventArgs e) { }
+        private void btnLimpiar_Click(object sender, EventArgs e) { }
+        private void LOGIN1_Load(object sender, EventArgs e) { }
+
 
         #region Windows Form Designer generated code
 
@@ -40,6 +45,7 @@
             CONTRASEÑA = new Label();
             label3 = new Label();
             PANEL = new Panel();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             PANEL.SuspendLayout();
             SuspendLayout();
@@ -74,9 +80,9 @@
             SESION.Name = "SESION";
             SESION.Size = new Size(87, 27);
             SESION.TabIndex = 2;
-            SESION.Text = "Sign In";
+            SESION.Text = "Enter";
             SESION.UseVisualStyleBackColor = true;
-            SESION.Click += SESION_Click;
+            SESION.Click += btnSignIn_Click;
             // 
             // textBox1
             // 
@@ -99,7 +105,7 @@
             // 
             REGISTRO.BackColor = Color.Silver;
             REGISTRO.Cursor = Cursors.Hand;
-            REGISTRO.Location = new Point(16, 373);
+            REGISTRO.Location = new Point(29, 371);
             REGISTRO.Name = "REGISTRO";
             REGISTRO.Size = new Size(60, 31);
             REGISTRO.TabIndex = 5;
@@ -161,6 +167,7 @@
             // PANEL
             // 
             PANEL.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            PANEL.Controls.Add(button1);
             PANEL.Controls.Add(label3);
             PANEL.Controls.Add(CONTRASEÑA);
             PANEL.Controls.Add(PEAR);
@@ -174,6 +181,18 @@
             PANEL.Name = "PANEL";
             PANEL.Size = new Size(257, 440);
             PANEL.TabIndex = 11;
+            PANEL.Paint += PANEL_Paint;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Wheat;
+            button1.Location = new Point(166, 402);
+            button1.Name = "button1";
+            button1.Size = new Size(50, 23);
+            button1.TabIndex = 11;
+            button1.Text = "Clear";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += btnLimpiar_Click;
             // 
             // LOGIN1
             // 
@@ -185,11 +204,17 @@
             Controls.Add(LOGIN);
             Name = "LOGIN1";
             Text = "Form1";
+            Load += LOGIN1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             PANEL.ResumeLayout(false);
             PANEL.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
+        }
+
+        private void SESION_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -205,5 +230,6 @@
         private Label CONTRASEÑA;
         private Label label3;
         private Panel PANEL;
+        private Button button1;
     }
 }

@@ -42,6 +42,7 @@
             label2 = new Label();
             textBox3 = new TextBox();
             panel1 = new Panel();
+            button2 = new Button();
             label4 = new Label();
             button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -53,7 +54,7 @@
             pictureBox1.AccessibleRole = AccessibleRole.IpAddress;
             pictureBox1.BackgroundImageLayout = ImageLayout.None;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(1, 13);
+            pictureBox1.Location = new Point(0, 22);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(86, 91);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -129,7 +130,7 @@
             SESION.Name = "SESION";
             SESION.Size = new Size(87, 27);
             SESION.TabIndex = 16;
-            SESION.Text = "Sign In";
+            SESION.Text = "Enter";
             SESION.UseVisualStyleBackColor = true;
             SESION.Click += SESION_Click;
             // 
@@ -182,6 +183,7 @@
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.Controls.Add(button2);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(textBox3);
@@ -200,6 +202,17 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(260, 483);
             panel1.TabIndex = 21;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Wheat;
+            button2.Location = new Point(195, 446);
+            button2.Name = "button2";
+            button2.Size = new Size(50, 23);
+            button2.TabIndex = 22;
+            button2.Text = "Clear";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += btnLimpiar_Click;
             // 
             // label4
             // 
@@ -224,7 +237,7 @@
             button1.Name = "button1";
             button1.Size = new Size(87, 27);
             button1.TabIndex = 23;
-            button1.Text = "Back";
+            button1.Text = "Sign In";
             button1.UseVisualStyleBackColor = false;
             button1.Click += Button1_Click;
             // 
@@ -237,6 +250,7 @@
             Controls.Add(panel1);
             Name = "Registro";
             Text = "Form2";
+            Load += Registro_Load_1;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -260,5 +274,6 @@
         private Panel panel1;
         private Button button1;
         private Label label4;
+        private Button button2;
     }
 }
